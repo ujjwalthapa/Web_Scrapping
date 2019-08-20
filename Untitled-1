@@ -1,0 +1,9 @@
+import json
+table = mars_facts_soup.find_all('table')[0] 
+df = pd.read_html(str(table))
+#df is dataframe
+print(df[0].to_json(orient='records'))
+
+# step 2. write everything to a .json file 
+# https://realpython.com/python-json/
+#step 3. dumping .json to mngodb collection
